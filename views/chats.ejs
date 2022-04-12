@@ -1,0 +1,33 @@
+<% layout('layouts/boilerplate') %>
+<% if (currentUser) { %>
+ <h1><%= currentUser.name %> (<%= currentUser.role %> )</h1>
+<% } %>
+<h1>My Chats</h1>
+<div>
+    <% user.chats.forEach(chat => { %>
+        <div class="chat">
+            <a href="/chats/<%=chat._id%>"> 
+                <div class="chat-description">
+                    <p class="chat-title">
+                    <% chat.participants.forEach(participant => { %>
+                        <%= participant._id == currentUser.id ? '': `${participant.name}(Doctor)`  %>
+                    <% }) %>
+                    </p> 
+                    <p class="chat-body"> 
+                        <%= chat.modifiedAt.toLocaleDateString("en-us") %>
+                        <%= chat.modifiedAt.toLocaleTimeString('en-US',{hour: '2-digit',minute:'2-digit'}) %> 
+                    </p> 
+                </div>
+            </a>
+        </div>
+    <% }) %>
+</div>
+<h1>Doctors</h1>
+<% users.forEach(doctor => { %>
+    <div class="chat">
+        <div class="chat-description">
+            <p class="chat-title"><%= doctor.name %></p>
+            <a class="chat-body" href="/user/<%= doctor._id%>"><p>Inicia un nuevo chat</p></a>
+        </div>
+    </div>
+<% }) %>

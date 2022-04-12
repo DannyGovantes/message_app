@@ -1,0 +1,18 @@
+<% layout('layouts/boilerplate') %>
+<div>
+    <% messages.forEach(message => { %>
+        <div class="message <%= message.owner == currentUser.id ? 'right': 'left' %>">
+            <div class="content"> <%= message.body %> 
+                <span> <%= message.sentAt.toLocaleTimeString('en-US',{hour: '2-digit',minute:'2-digit'}) %>  </span>  
+            </div>
+        </div>
+
+    <% }) %>
+</div>
+<div>
+    <form action="/chats/<%=chat%>" method="POST">
+        <input type="text" name="body" id="body">
+        <button>Enviar</button>
+    </form>
+</div>
+

@@ -1,0 +1,15 @@
+<header class="">
+  <a href="/" class="logo">Hello Doctor</a>
+    <nav class="">
+      <ul class="nav__links">
+        <% if (currentUser) { %>
+          <li><a href="/chats">Chats</a></li>
+          <a href="/logout" class="">Log Out</a>
+        <% } %>
+      </ul>
+      <% if (!currentUser) { %>
+        <a href="/login" class="cta"><button>Iniciar Sesión</button></a>
+        <a href="/signin" class="cta"><button>Registrarse</button></a>
+      <% } %>
+    </nav>
+</header>

@@ -1,0 +1,11 @@
+<% layout('layouts/boilerplate') %>
+<h1 class="">Inicia Sesión</h1>
+<div class="login">
+    <div class="form">
+        <form class="login__form" action="/api/v1/users/login" method="POST">
+            <input type="text" id="email" name="email" placeholder="email">
+            <input type="password" id="password" name="password" placeholder="password">
+            <button class="login__el">Login</button>
+        </form>
+    </div>
+</div> 

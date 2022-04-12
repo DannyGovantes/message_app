@@ -1,0 +1,157 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Poppins';
+}
+
+li,a,button{
+    font-weight: 500;
+    font-size: 16px;
+    text-decoration: none;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+    background:  linear-gradient(90deg, #6acaf0 0%, #8fd8fa 100%);
+}
+.logo{
+    cursor: pointer;
+    color: #f3f3f2;
+    font-weight: 500;
+    font-size: 30px;
+
+}
+.nav__links{
+    list-style: none;
+}
+.nav__links li{
+    display: inline-block;
+    padding: 0px 20px;
+}
+.nav__links li a {
+    transition: all 0.3s ease   ;
+}
+.nav__links li a:hover {
+    color:#5ca3da
+}
+button{
+    padding: 9px 25px;
+    background-color: rgb(217, 231, 235);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer; 
+    transition: all 0.3s ease;
+}
+button:hover{
+    background-color: rgba(0,136,169,0.8);
+    color: white;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.container{
+    max-width: 1170px;
+    margin: auto;
+}
+.footer{
+    background: #f3f3f2;
+    padding: 50px 0;
+    line-height: 1.5;
+}
+.footer-col{
+    width: 30%;
+    padding: 0 15px;
+}
+.footer-col ul li{
+    margin-bottom: 10px;
+}
+.footer-col ul li a{
+    font-size: 16px;
+    font-weight: 300;
+    display: block;
+}
+.login{
+    width: 400px;
+    padding: 8% 0 0;
+    margin: auto;
+}
+.form{
+    position: relative;
+    z-index: 1;
+    background: linear-gradient(90deg, #6acaf0 0%, #8fd8fa 100%);
+    border-radius: 10px;
+    max-width: 300px;
+    margin: 0 auto 100px;
+    padding: 45px;
+    text-align: center;
+}
+.form input {
+    outline: 0;
+    background: #f2f2f2;
+    width: 100%;
+    border: 0;
+    border-radius: 5px;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+.message{
+    display: grid;
+    margin: 20px;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(1,1fr);
+}
+.content{
+    padding: 30px;
+}
+.right .content{
+    grid-area: 1 / 2 / 2 / 5;
+    background: #AFEEEE;
+    border-radius: 20px 20px 0 20px;
+    text-align: right;
+    align-self: center;
+} 
+.left .content{
+    grid-area: 1 / 2 / 2 / 5;
+    background: #aac7c9;
+    border-radius: 20px 20px 20px 0;
+    text-align: left;
+    align-self: center;
+} 
+.chat{
+    height: 100px;
+    width: 380px;
+    position: relative;
+    border-radius: 0 1em 1em 0;
+    background: #cee7f8;
+    margin: 10px;
+
+}
+.chat-description{
+    display: flex;
+    gap: 1em;
+    flex-direction: column;
+    background: #a6d8fa;
+    height: 50%;
+    bottom: 0;
+    border-radius: 0 1em 0 0;
+    padding: 1rem;
+}
+.chat-title{
+    font-size: 1.1em;
+    font-weight: 700;   
+}
+.chat-body{
+    font-size: 1em;
+    
+}
+

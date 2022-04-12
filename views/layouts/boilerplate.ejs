@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="connect-src ws:;">
+    <link rel="stylesheet" href="/stylesheets/app.css">
+    <title>Hello Doctor</title>
+</head>
+<body class="d-flex text-center">
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+        <%- include('../partials/navbar') %>
+        
+        <main class="px-3">
+           
+            <%- body %>
+        </main>
+        <%- include('../partials/footer') %>
+    </div>
+</body>
+</html>
